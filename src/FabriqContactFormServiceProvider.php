@@ -2,9 +2,9 @@
 
 namespace Ikoncept\FabriqContactForm;
 
+use Ikoncept\FabriqContactForm\Commands\FabriqContactFormCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ikoncept\FabriqContactForm\Commands\FabriqContactFormCommand;
 
 class FabriqContactFormServiceProvider extends PackageServiceProvider
 {
