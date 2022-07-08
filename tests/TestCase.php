@@ -2,9 +2,9 @@
 
 namespace Ikoncept\FabriqContactForm\Tests;
 
+use Ikoncept\FabriqContactForm\FabriqContactFormServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Ikoncept\FabriqContactForm\FabriqContactFormServiceProvider;
 
 class TestCase extends Orchestra
 {
