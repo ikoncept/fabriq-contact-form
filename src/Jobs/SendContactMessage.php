@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Mail;
 
 class SendContactMessage implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * Sent data
