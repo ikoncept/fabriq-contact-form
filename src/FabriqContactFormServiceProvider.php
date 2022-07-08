@@ -19,7 +19,6 @@ class FabriqContactFormServiceProvider extends PackageServiceProvider
             ->name('fabriq-contact-form')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_fabriq-contact-form_table')
-            ->hasCommand(FabriqContactFormCommand::class);
+            ->hasRoute('api');
     }
 }
