@@ -21,6 +21,6 @@ return [
         'name' => 'required|max:125',
         'email' => 'required|max:125',
         'phone' => 'max:30',
-        'message' => 'required|max:3000'
+        'message' => 'required|max:3000',
     ]
 ];
