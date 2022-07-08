@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Ikoncept\FabriqContactForm\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FabriqContactFormCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'fabriq-contact-form';
 
     public $description = 'My command';
 
