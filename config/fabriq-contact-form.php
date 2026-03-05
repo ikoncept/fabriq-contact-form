@@ -14,12 +14,12 @@ return [
 
     'mail_view' => 'fabriq-contact-form::emails.contact_plain',
     'mailable' => \Ikoncept\FabriqContactForm\Mail\ContactMessage::class,
-    'mail_view' => 'fabriq-contact-form::emails.receipt',
+    'mail_view' => 'fabriq-contact-form::emails.contact_plain',
 
     'send_receipt' => false,
     'receipt_subject' => 'Tack för ditt meddelande',
     'receipt_mailable' => \Ikoncept\FabriqContactForm\Mail\ReceiptMessage::class,
-    'receipt_mail_markdown_view' => 'receipt',
+    'receipt_mail_markdown_view' => 'fabriq-contact-form::emails.receipt',
 
     'form_request_class' => \Ikoncept\FabriqContactForm\Http\Requests\ContactMessageRequest::class,
 
