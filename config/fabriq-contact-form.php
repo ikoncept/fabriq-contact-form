@@ -18,8 +18,8 @@ return [
 
     'send_receipt' => false,
     'receipt_subject' => 'Tack för ditt meddelande',
-    'receipt_mailable' => \Ikoncept\FabriqContactForm\Mail\ContactMessage::class,
-    'receipt_mail_view' => \Ikoncept\FabriqContactForm\Mail\ReceiptMessage::class,
+    'receipt_mailable' => \Ikoncept\FabriqContactForm\Mail\ReceiptMessage::class,
+    'receipt_mail_markdown_view' => 'receipt',
 
     'form_request_class' => \Ikoncept\FabriqContactForm\Http\Requests\ContactMessageRequest::class,
 

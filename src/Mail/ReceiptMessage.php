@@ -39,7 +39,7 @@ class ReceiptMessage extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'receipt',
+            markdown: config('fabriq-contact-form.receipt_mail_markdown_view'),
             with: $this->contactData,
         );
     }
