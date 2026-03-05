@@ -2,6 +2,7 @@
 
 namespace Ikoncept\FabriqContactForm\Jobs;
 
+use Ikoncept\FabriqContactForm\Events\ContactMessageReceiptSent;
 use Ikoncept\FabriqContactForm\Events\ContactMessageSent;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -64,5 +65,15 @@ class SendContactMessage implements ShouldQueue
             ->send(new $mailable($this->attributes));
 
         ContactMessageSent::dispatch($this->attributes);
+
+        if (config('fabriq-contact-form.send_receipt')) {
+            $receiptMailable = config('fabriq-contact-form.mailable');
+
+            Mail::to($this->attributes['email'])
+                ->send(new $receiptMailable($this->attributes));
+
+            ContactMessageReceiptSent::dispatch($this->attributes);
+        }
+
     }
 }
