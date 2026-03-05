@@ -67,7 +67,7 @@ class SendContactMessage implements ShouldQueue
         ContactMessageSent::dispatch($this->attributes);
 
         if (config('fabriq-contact-form.send_receipt')) {
-            $receiptMailable = config('fabriq-contact-form.mailable');
+            $receiptMailable = config('fabriq-contact-form.receipt_mailable');
 
             Mail::to($this->attributes['email'])
                 ->send(new $receiptMailable($this->attributes));
